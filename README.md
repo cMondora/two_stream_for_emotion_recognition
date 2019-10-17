@@ -21,10 +21,10 @@ Use the dataset CK+. In order to generate the optical-flow and rgb images gather
 Run split.py to split training and test set.
 You can find the txts in ./datasets/settings/ck/
 ```
-train_flow_split.py
-val_flow_split.py
-train_rgb_split.py
-val_rgb_split.py
+train_flow_split.txt
+val_flow_split.txt
+train_rgb_split.txt
+val_rgb_split.txt
 ```
 
 ## Training
@@ -36,3 +36,6 @@ For temporal stream (The sequential 5 optial-flow images from x_flow and y_flow 
 ```
 [your_path_for_flow_directory] -m flow -a flow_resnet152 --new_length=5 --epochs 250 --lr 0.001 --lr_steps 200 300
 ```
+
+## Testing
+Run spatial_demo.py and temporal_demo.py for testing.
