@@ -28,6 +28,7 @@ val_rgb_split.txt
 ```
 
 ## Training
+Run main_single_gpu.py
 For spatial stream (the last image in every file is used for training which is usually the one that can express the emotion most).
 ```
 [your_path_for_rbg_directory] -m rgb -a rgb_resnet152 --new_length=1 --epochs 250 --lr 0.001 --lr_steps 100 200
