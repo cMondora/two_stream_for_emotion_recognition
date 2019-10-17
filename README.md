@@ -40,6 +40,7 @@ For temporal stream (The sequential 5 optial-flow images from x_flow and y_flow 
 
 ## Testing
 Run spatial_demo.py and temporal_demo.py for testing.
+
  network        | top1   |
 ----------------|:------:|
 Spatial stream  | 93.10% | 
