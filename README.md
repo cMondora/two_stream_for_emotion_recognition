@@ -7,6 +7,8 @@ Use the dataset CK+. In order to generate the optical-flow and rgb images gather
 |-- rgb
 |   |-- 1
 |   |   |--***.png
+.
+..
 ...
 |   |-- 6
 |   |   |--***.png
