@@ -2,7 +2,7 @@
 Two stream to realize emotion recognition which can be completed as video level. Fork from [two stream pytorch](https://github.com/bryanyzhu/two-stream-pytorch).
 ## Demo
 ![naga](./figure/naga.gif)
-![S050_080](./figure/S050_080.)
+![S050_080](./figure/S050_080.jpg)
 
 
 ## Data preparaton
