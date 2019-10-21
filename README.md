@@ -10,7 +10,7 @@ Use the dataset CK+. In order to generate the optical-flow and rgb images gather
 |   |   |-- S010_004                            |   |   |-- S010_004
 |   |   |   |-- ***.png                         |   |   |   |-- x_flow
 .                                               |   |   |   |   |-- ***.png  
-..                                              |   |   |   |-- x_flow
+..                                              |   |   |   |-- y_flow
 ...                                             |   |   |   |   |-- ***.png  
 |   |-- 6   
 |   |   |-- S056_002                            .
