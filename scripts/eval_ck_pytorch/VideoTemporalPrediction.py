@@ -61,9 +61,9 @@ def VideoTemporalPrediction(
             # flow_x_file = os.path.join(vid_name,vid_name.split('/')[-2]+'_{0:08d}.png'.format(i*step+j+1 + start_frame))
             # flow_y_file = os.path.join(vid_name[:-6]+'y_flow',vid_name.split('/')[-2]+ '_{0:08d}.png'.format(i*step+j+1 + start_frame))
             flow_x_file = os.path.join(vid_name,
-                                       vid_name.split('/')[-2] + '_{0:08d}.png'.format(i * step + j + start_frame))
+                                       vid_name.split('/')[-2] + '_{0:08d}.png'.format(i * step + j + start_frame+1))
             flow_y_file = os.path.join(vid_name[:-6] + 'y_flow',
-                                       vid_name.split('/')[-2] + '_{0:08d}.png'.format(i * step + j + start_frame))
+                                       vid_name.split('/')[-2] + '_{0:08d}.png'.format(i * step + j + start_frame+1))
             img_x = cv2.imread(flow_x_file, cv2.IMREAD_GRAYSCALE)
             img_y = cv2.imread(flow_y_file, cv2.IMREAD_GRAYSCALE)
             img_x = cv2.resize(img_x, dims[1::-1])

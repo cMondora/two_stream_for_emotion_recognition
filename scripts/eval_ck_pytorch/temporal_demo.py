@@ -52,7 +52,7 @@ def main():
 
     model_start_time = time.time()
     params = torch.load(model_path)
-    temporal_net = models.flow_resnet152(pretrained=False, num_classes=101)
+    temporal_net = models.flow_resnet152(pretrained=False, num_classes=8)
     temporal_net.load_state_dict(params['state_dict'])
     temporal_net.cuda()
     temporal_net.eval()

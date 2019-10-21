@@ -37,23 +37,24 @@ def softmax(x):
 
 def save_fig(pred,clip_path):
     fig_name=clip_path.split('/')[-1]
-    x=np.linspace(1,len(pred),len(pred))
-    plt.bar(x[1:], pred[1:])
+    # x=np.linspace(1,len(pred),len(pred))
+    x = ['angry','contempt','disgust','fear','happy','sadness','surprise']
+    plt.bar(x, pred[1:])
     plt.savefig('/home/wxc/.pyenv/versions/3.5.5/envs/two_stream/test/{}.jpg'.format(fig_name))
     plt.clf()
 
 def main():
 
-    model_path = '../../checkpoints/rgb_model_best.pth.tar'
-    data_dir = "~/basedata/expression_data/ck+_pre"
+    # model_path = '../../checkpoints/rgb_model_best.pth.tar'
+    model_path = '../../checkpoints/225_rgb_checkpoint.pth.tar'
+    # data_dir = "~/basedata/expression_data/ck+_pre"
     start_frame = 0
-    #num_categories = 101
     num_categories = 8
 
     model_start_time = time.time()
     params = torch.load(model_path)
 
-    spatial_net = models.rgb_resnet152(pretrained=False, num_classes=101)
+    spatial_net = models.rgb_resnet152(pretrained=False, num_classes=8)
     spatial_net.load_state_dict(params['state_dict'])
     spatial_net.cuda()
     spatial_net.eval()
@@ -135,7 +136,7 @@ if __name__ == "__main__":
             # result_list.append(avg_spatial_pred_fc8)
             # # avg_spatial_pred = softmax(avg_spatial_pred_fc8)
 
-            # pred_index = np.argmax(avg_spatial_pred_fc8)
+            # pred_index = np.argmax(avg_spatial_pred_fc8)101
             # print("GT: %d, Prediction: %d" % (class_index, pred_index))
 
             # if pred_index == class_index:
