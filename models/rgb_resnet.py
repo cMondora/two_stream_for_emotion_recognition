@@ -113,7 +113,7 @@ class ResNet(nn.Module):
         self.dp = nn.Dropout(p=0.8)
         self.fc_action = nn.Linear(512 * block.expansion, num_classes)
         self.bn_final = nn.BatchNorm1d(num_classes)
-        # self.fc2 = nn.Linear(num_classes, num_classes)
+        self.fc2 = nn.Linear(num_classes, num_classes)
         self.fc_final = nn.Linear(num_classes, 8)
 
         for m in self.modules():
