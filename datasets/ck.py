@@ -183,6 +183,7 @@ class ck(data.Dataset):
                 if self.phase == "train":
                     if average_duration >= self.new_length:
                         offset = random.randint(0, average_duration - self.new_length)
+                        # offsets.append(average_duration - self.new_length)
                         # No +1 because randint(a,b) return a random integer N such that a <= N <= b.
                         offsets.append(offset + seg_id * average_duration)
                     else:
